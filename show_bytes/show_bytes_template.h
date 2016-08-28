@@ -14,7 +14,10 @@ void show_bytes(T *input) {
 
 /*
  * %x is hexadecimal representation of unsigned integer.
- * If you print a number 
+ * If you print a number larger than 127 example 128 using a char *ptr like
+ * in the function below instead of seeing 80 you shall see
+ * ffffff80, because 128 is interpreted as -128 for signed char which when expanded to
+ * integer becomes ffffff80 as expansion of signed numbers adds 1s to left.
  */
 
 template <class T>
